@@ -65,6 +65,61 @@
 		font-weight: 800;
 		line-height: 1.2;
 	}
+
+    /* ===== Responsive per tablet (fino a 768px) ===== */
+@media (max-width: 768px) {
+    #amenities {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .card {
+      width: 45%;         /* due card per riga */
+      padding: 1rem;      /* un po’ meno padding */
+    }
+  
+    .card .icon svg {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .card .title p {
+      font-size: 1rem;
+    }
+  
+    .card .total p {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* ===== Responsive per smartphone (fino a 480px) ===== */
+  @media (max-width: 480px) {
+    #amenities {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+  
+    .card {
+      width: 100%;        /* una card per riga */
+      padding: 0.75rem;   /* padding ancora più compatto */
+    }
+  
+    .card .icon svg {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .card .title p {
+      font-size: 0.95rem;
+    }
+  
+    .card .total p {
+      font-size: 1.1rem;
+    }
+  }
+  
 </style>
 
 <section id="amenities" aria-label="Servizi e caratteristiche">
