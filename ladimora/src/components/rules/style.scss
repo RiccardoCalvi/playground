@@ -2,99 +2,101 @@
 @use "../../styles/mixins.scss" as *;
 
 .rules {
-  @include flex-container(column, center, stretch);
-  gap: $spacing-lg;
-  padding: $spacing-lg;
+	@include flex-container(column, center, stretch);
+	gap: $spacing-lg;
+	padding: $spacing-lg;
 
-  &__title {
-    @include heading-text;
-    font-size: $font-size-2xl;
-    color: $color-primary;
-    text-align: center;
-    margin-bottom: $spacing-md;
-  }
+	&__title {
+		@include heading-text;
+		font-size: $font-size-2xl;
+		color: $color-primary;
+		text-align: center;
+		margin-bottom: $spacing-md;
+	}
 
-  &__list {
-    @include flex-container(column, flex-start, stretch);
-    gap: $spacing-md;
+	&__list {
+		@include flex-container(column, flex-start, stretch);
+		gap: $spacing-md;
 
-    &-item {
-      @include body-text;
-      font-size: $font-size-base;
-      color: $color-text;
-      padding: $spacing-md;
-      background: $color-white;
-      border-radius: $radius;
-      box-shadow: $shadow-sm;
+		&-item {
+			@include body-text;
+			font-size: $font-size-base;
+			color: $color-text;
+			padding: $spacing-md;
+			background: $color-white;
+			border-radius: $radius;
+			box-shadow: $shadow-sm;
+			transition: transform 0.2s ease;
 
-      &:hover {
-        transform: translateY(-2px);
-        transition: transform 0.2s ease;
-      }
-    }
-  }
+			&:hover {
+				transform: translateY(-2px);
+			}
+		}
+	}
 
-  @include respond-to(md) {
-    padding: $spacing-md;
+	@include respond-to(md) {
+		padding: $spacing-md;
 
-    &__title {
-      font-size: $font-size-xl;
-    }
+		&__title {
+			font-size: $font-size-xl;
+		}
 
-    &__list {
-      gap: $spacing-sm;
+		&__list {
+			gap: $spacing-sm;
 
-      &-item {
-        padding: $spacing-sm;
-      }
-    }
-  }
+			&-item {
+				padding: $spacing-sm;
+			}
+		}
+	}
 
-  @include respond-to(sm) {
-    padding: $spacing-sm;
+	@include respond-to(sm) {
+		padding: $spacing-sm;
 
-    &__title {
-      font-size: $font-size-lg;
-    }
-  }
+		&__title {
+			font-size: $font-size-lg;
+		}
+	}
 }
 
 .accordion {
-    border-top: 1px solid #ccc;
-  
-    .accordion-item {
-      border-bottom: 1px solid #ccc;
-  
-      .accordion-header {
-        background: #f7f7f7;
-        cursor: pointer;
-        padding: 1rem;
-        position: relative;
-  
-        &::after {
-          content: '\25BC';
-          position: absolute;
-          right: 1rem;
-          transition: transform 0.2s;
-        }
-  
-        &.active::after {
-          transform: rotate(180deg);
-          color: $color-primary;
-        }
-      }
-  
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        padding: 0 1rem;
-        background: $color-white;
-  
-        p {
-          margin: 1rem 0;
-        }
-      }
-    }
-  }
-  
+	border-top: 1px solid $color-shadow;
+
+	.accordion-item {
+		border-bottom: 1px solid $color-shadow;
+
+		.accordion-header {
+			background: $color-white;
+			cursor: pointer;
+			padding: $spacing-md;
+			position: relative;
+			@include body-text;
+
+			&::after {
+				content: '\25BC';
+				position: absolute;
+				right: $spacing-md;
+				transition: transform 0.2s;
+			}
+
+			&.active::after {
+				transform: rotate(180deg);
+				color: $color-primary;
+			}
+		}
+
+		.accordion-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			padding: 0 $spacing-md;
+			background: $color-white;
+
+			p {
+				margin: $spacing-md 0;
+				@include body-text;
+			}
+		}
+	}
+}
+

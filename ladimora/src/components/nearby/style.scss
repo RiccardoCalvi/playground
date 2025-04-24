@@ -2,105 +2,95 @@
 @use "../../styles/mixins.scss" as *;
 
 .nearby {
-  padding: $spacing-lg;
+	padding: $spacing-lg;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: $spacing-lg;
-  }
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: $spacing-lg;
+	}
 
-  &__card {
-    display: flex;
-    align-items: center;
-    background: $color-white;
-    border-radius: $radius;
-    box-shadow: $shadow-sm;
-    padding: $spacing-md;
-    gap: $spacing-md;
-    transition: box-shadow 0.2s ease;
+	&__card {
+		@include flex-container(row, flex-start, center);
+		@include card-base;
+		gap: $spacing-md;
+		transition: box-shadow 0.2s ease;
 
-    &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
+		&:hover {
+			box-shadow: 0 4px 12px $color-shadow;
+		}
 
-    .icon {
-      background: $color-primary;
-      border-radius: $radius;
-      padding: $spacing-sm;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 48px;
-      height: 48px;
+		.icon {
+			background: $color-primary;
+			border-radius: $radius;
+			padding: $spacing-sm;
+			@include flex-container(row, center, center);
+			min-width: 48px;
+			height: 48px;
 
-      svg {
-        width: 24px;
-        height: 24px;
-        fill: $color-white;
-      }
-    }
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: $color-white;
+			}
+		}
 
-    .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+		.info {
+			@include flex-container(column, center, flex-start);
 
-      h4 {
-        font-family: $font-heading;
-        font-size: $font-size-base;
-        color: $color-text;
-        margin: 0 0 $spacing-xs;
-      }
+			h4 {
+				@include heading-text;
+				font-size: $font-size-base;
+				color: $color-text;
+				margin: 0 0 $spacing-xs;
+			}
 
-      p {
-        font-family: $font-heading;
-        font-size: $font-size-xl;
-        font-weight: bold;
-        color: $color-text;
-        margin: 0;
-      }
-    }
-  }
+			p {
+				@include heading-text;
+				font-size: $font-size-xl;
+				color: $color-text;
+				margin: 0;
+			}
+		}
+	}
 
-  @include respond-to(md) {
-    padding: $spacing-md;
-    &__grid {
-      gap: $spacing-md;
-    }
-    &__card {
-      padding: $spacing-md;
-    }
-  }
+	@include respond-to(md) {
+		padding: $spacing-md;
+		&__grid {
+			gap: $spacing-md;
+		}
+		&__card {
+			padding: $spacing-md;
+		}
+	}
 
-  @include respond-to(sm) {
-    padding: $spacing-sm;
-    &__grid {
-      gap: $spacing-sm;
-    }
-    &__card {
-      flex-direction: row;
-      padding: $spacing-sm;
+	@include respond-to(sm) {
+		padding: $spacing-sm;
+		&__grid {
+			gap: $spacing-sm;
+		}
+		&__card {
+			padding: $spacing-sm;
 
-      .icon {
-        min-width: 40px;
-        height: 40px;
+			.icon {
+				min-width: 40px;
+				height: 40px;
 
-        svg {
-          width: 20px;
-          height: 20px;
-        }
-      }
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
 
-      .info {
-        h4 {
-          font-size: $font-size-sm;
-        }
+			.info {
+				h4 {
+					font-size: $font-size-sm;
+				}
 
-        p {
-          font-size: $font-size-lg;
-        }
-      }
-    }
-  }
+				p {
+					font-size: $font-size-lg;
+				}
+			}
+		}
+	}
 }
