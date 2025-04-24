@@ -1,0 +1,11 @@
+// Import variables first
+@use "variables.scss" as *;
+
+// Import mixins
+@use "mixins.scss" as *;
+
+// Import components
+@use "amenties.scss";
+@use "cardDirections.scss";
+@use "location.scss";
+@use "rules.scss"; 

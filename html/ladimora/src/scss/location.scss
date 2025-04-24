@@ -1,0 +1,103 @@
+// Variables
+$primary-color:        #f8941d;
+$text-color:           #232323;
+$font-family:          'Montserrat', sans-serif;
+$card-bg:              #fff;
+$card-radius:          0.5rem;
+$card-shadow-color:    rgba(0, 0, 0, 0.1);
+$gap:                  1rem;
+$gap-mobile:           0.75rem;
+$card-padding:         0.75rem 1rem;
+$card-padding-mobile:  0.5rem;
+
+// Mixins
+@mixin grid($cols, $gap-size) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap-size;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Table container: 2-column grid
+.table {
+  @include grid(2, $gap);
+  max-width: 600px;
+  margin: 5px auto;
+
+  @media screen and (max-width: 480px) {
+    @include grid(1, $gap-mobile);
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    background: $card-bg;
+    border-radius: $card-radius;
+    box-shadow: 0 2px 8px $card-shadow-color;
+    padding: $card-padding;
+
+    @media screen and (max-width: 480px) {
+      padding: $card-padding-mobile;
+      gap: $gap-mobile;
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: $primary-color;
+      border-radius: 0.375rem;
+      @include flex-center;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 40px;
+        height: 40px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-family: $font-family;
+      color: $text-color;
+
+      h4 {
+        margin: 0;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        @media screen and (max-width: 480px) {
+          font-size: 0.75rem;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 800;
+
+        @media screen and (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

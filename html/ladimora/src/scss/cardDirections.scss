@@ -1,0 +1,81 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
+// Mixin per container flex
+@mixin flex-container(
+  $direction: row,
+  $justify: space-around,
+  $align: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Container delle card
+.localizzazioneCard {
+  @include flex-container(row, space-around, normal, nowrap);
+  gap: $card-gap;
+  margin: 0 auto;
+  padding: $spacing-xs $spacing-md;
+
+  @include respond-to(md) {
+    flex-wrap: wrap;
+  }
+
+  // Card singola
+  .card {
+    @include card-base;
+    flex: 1 1 calc(33.333% - #{$card-gap});
+    min-width: 280px;
+
+    @include flex-container(column, space-between, stretch);
+
+    &__header {
+      @include flex-container(row, space-between, center);
+      margin-bottom: $spacing-md;
+    }
+
+    // Titolo, prezzo e bottone condividono il font heading
+    &__title,
+    &__price,
+    &__button {
+      @include heading-text;
+    }
+
+    &__title {
+      @include flex-container(row, flex-start, center);
+      gap: $spacing-xs;
+      font-size: $font-size-2xl;
+      color: $color-primary;
+
+      svg {
+        height: 40px;
+      }
+    }
+
+    &__price {
+      font-size: $font-size-2xl;
+      color: $color-primary;
+    }
+
+    &__text {
+      @include body-text;
+      font-size: $font-size-base;
+      color: $color-text;
+      margin-bottom: $spacing-lg;
+      flex: 1;
+    }
+
+    &__button {
+      @include button-base;
+    }
+
+    @include respond-to(md) {
+      flex: 1 1 100%;
+    }
+  }
+}

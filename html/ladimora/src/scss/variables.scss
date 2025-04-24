@@ -1,0 +1,35 @@
+// Variables
+// Colors
+$color-primary:        #f8941d;
+$color-primary-hover:  rgba(248, 148, 29, 0.63);
+$color-text:           #232323;
+$color-white:          #fff;
+$color-shadow:         rgba(0, 0, 0, 0.1);
+
+// Spacing
+$card-gap:             2rem;
+$spacing-xs:           0.5rem;
+$spacing-sm:           0.75rem;
+$spacing-md:           1rem;
+$spacing-lg:           1.5rem;
+
+// Typography
+$font-body:            'Lato', sans-serif;
+$font-heading:         'Montserrat', sans-serif;
+$font-size-sm:         0.95rem;
+$font-size-base:       1rem;
+$font-size-lg:         1.125rem;
+$font-size-xl:         1.25rem;
+$font-size-2xl:        1.5rem;
+
+// Border
+$radius:               0.5rem;
+$radius-full:          999px;
+
+// Breakpoints
+$breakpoint-sm:        480px;
+$breakpoint-md:        768px;
+$breakpoint-lg:        1024px;
+
+// Shadows
+$shadow-sm:            0 2px 8px $color-shadow;
