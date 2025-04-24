@@ -18,7 +18,9 @@ export default {
     scss({
       output: path.resolve(__dirname, 'dist/ladimora.min.css'),
       sass,
-      outputStyle: 'compressed'
+      outputStyle: 'compressed',
+      fileName: 'ladimora.min.css',
+      watch: 'src/**/*.scss'
     }),
     terser()
   ]

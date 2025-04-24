@@ -1,8 +1,9 @@
 // Import variables first
-@use "variables.scss" as *;
+@use "./mixins.scss" as *;
 
 // Import mixins
-@use "mixins.scss" as *;
+@use "./mixins.scss" as *;
 
 // Import components
-@use "../components/card/style.scss" as *; 
+@use "./../components/card/style.scss" as *; 
+@use "./../components/rules/style.scss" as *; 
