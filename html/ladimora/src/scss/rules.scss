@@ -1,3 +1,64 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
+.rules {
+  @include flex-container(column, center, stretch);
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+
+  &__title {
+    @include heading-text;
+    font-size: $font-size-2xl;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: $spacing-md;
+  }
+
+  &__list {
+    @include flex-container(column, flex-start, stretch);
+    gap: $spacing-md;
+
+    &-item {
+      @include body-text;
+      font-size: $font-size-base;
+      color: $color-text;
+      padding: $spacing-md;
+      background: $color-white;
+      border-radius: $radius;
+      box-shadow: $shadow-sm;
+
+      &:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    padding: $spacing-md;
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__list {
+      gap: $spacing-sm;
+
+      &-item {
+        padding: $spacing-sm;
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    padding: $spacing-sm;
+
+    &__title {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
 .accordion {
     border-top: 1px solid #ccc;
   
@@ -19,7 +80,7 @@
   
         &.active::after {
           transform: rotate(180deg);
-          color: $primary-color;
+          color: $color-primary;
         }
       }
   
@@ -28,7 +89,7 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         padding: 0 1rem;
-        background: $card-bg;
+        background: $color-white;
   
         p {
           margin: 1rem 0;

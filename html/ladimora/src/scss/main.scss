@@ -5,7 +5,7 @@
 @use "mixins.scss" as *;
 
 // Import components
-@use "amenties.scss";
-@use "cardDirections.scss";
-@use "location.scss";
-@use "rules.scss"; 
+@use "amenties.scss" as *;
+@use "cardDirections.scss" as *;
+@use "location.scss" as *;
+@use "rules.scss" as *; 
