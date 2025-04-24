@@ -1,2 +1,4 @@
 // Importa tutti i componenti custom qui
-import './components/ladimora-card.js';
+import './src/styles/main.scss';
+
+import './src/components/card/card';
