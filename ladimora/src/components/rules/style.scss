@@ -60,41 +60,90 @@
 }
 
 .accordion {
-	border-top: 1px solid $color-shadow;
+	@include flex-container(column, flex-start, stretch);
+	gap: $spacing-md;
+	width: 100%;
 
 	.accordion-item {
-		border-bottom: 1px solid $color-shadow;
+		@include card-base;
+		transition: transform 0.2s ease;
+
+		&:hover {
+			transform: translateY(-2px);
+		}
 
 		.accordion-header {
-			background: $color-white;
+			@include heading-text;
+			font-size: $font-size-lg;
+			color: $color-text;
 			cursor: pointer;
 			padding: $spacing-md;
 			position: relative;
-			@include body-text;
+			display: flex;
+			align-items: center;
+			gap: $spacing-sm;
 
 			&::after {
 				content: '\25BC';
 				position: absolute;
 				right: $spacing-md;
 				transition: transform 0.2s;
+				color: $color-primary;
 			}
 
 			&.active::after {
 				transform: rotate(180deg);
-				color: $color-primary;
 			}
 		}
 
 		.accordion-content {
 			max-height: 0;
 			overflow: hidden;
-			transition: max-height 0.2s ease-out;
+			transition: max-height 0.3s ease-out;
 			padding: 0 $spacing-md;
 			background: $color-white;
 
 			p {
 				margin: $spacing-md 0;
 				@include body-text;
+				color: $color-text;
+				font-size: $font-size-base;
+			}
+		}
+	}
+
+	@include respond-to(md) {
+		gap: $spacing-sm;
+
+		.accordion-item {
+			padding: $spacing-sm;
+
+			.accordion-header {
+				font-size: $font-size-base;
+				padding: $spacing-sm;
+			}
+
+			.accordion-content {
+				padding: 0 $spacing-sm;
+
+				p {
+					font-size: $font-size-sm;
+					margin: $spacing-sm 0;
+				}
+			}
+		}
+	}
+
+	@include respond-to(sm) {
+		.accordion-item {
+			.accordion-header {
+				font-size: $font-size-sm;
+			}
+
+			.accordion-content {
+				p {
+					font-size: $font-size-sm;
+				}
 			}
 		}
 	}
