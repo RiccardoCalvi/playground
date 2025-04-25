@@ -33,7 +33,7 @@ class LaDimoraCards extends HTMLElement {
 					<div class="card__price">${mezzo.price}</div>
 				</div>
 				<div class="card__text">${mezzo.text}</div>
-				<a href="${mezzo.link}" target="_blank" class="card__button">PRENOTA</a>
+				<a href="${mezzo.link}" target="_blank" class="card__button">ACQUISTA</a>
 			</div>
 		`).join('');
 
