@@ -1,0 +1,65 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+
+header{
+	position: sticky;
+	top: 0;
+	left: 0;
+	padding: 1rem 2rem;
+	box-shadow: $shadow-sm;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		background-color: $color-white;
+
+	#logo{
+		width: 120px !important;
+	}
+
+	#menu {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		gap: $spacing-lg;
+
+		ul{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+            gap: $spacing-lg;
+			li {
+				list-style: none;
+			a {
+                font-family: $font-heading;
+				text-decoration: none;
+				color: $color-text;
+                transition: 0.2s ease-in-out;
+                &:hover, &:active{
+                    color: $color-primary-hover;
+                }
+				}
+			}
+		}
+
+		&__button {
+		@include button-base;
+        box-shadow: $shadow-sm;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

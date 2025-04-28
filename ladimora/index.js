@@ -6,3 +6,4 @@ import './src/components/rules/rules';
 import './src/components/nearby/nearby';
 import './src/components/amenities/amenities';
 import './src/components/logo/logo';
+import './src/components/header/header';
