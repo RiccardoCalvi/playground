@@ -7,3 +7,4 @@ import './src/components/nearby/nearby';
 import './src/components/amenities/amenities';
 import './src/components/logo/logo';
 import './src/components/header/header';
+import './src/components/footer/footer';
