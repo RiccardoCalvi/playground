@@ -12,9 +12,9 @@ class LaDimoraBooking extends HTMLElement {
 					<div class="custom-date-container">
 						<label class="custom-date-label" for="dateStart">Arrivo</label>
 						<div class="custom-date-display">
+							<span class="custom-date-weekday"></span>
 							<span class="custom-date-day"></span>
 							<span class="custom-date-month"></span>
-							<span class="custom-date-weekday"></span>
 						</div>
 						<input type="date" id="dateStart" name="dateStart" required>
 					</div>
@@ -23,9 +23,9 @@ class LaDimoraBooking extends HTMLElement {
 					<div class="custom-date-container">
 						<label class="custom-date-label" for="dateEnd">Partenza</label>
 						<div class="custom-date-display">
+							<span class="custom-date-weekday"></span>
 							<span class="custom-date-day"></span>
 							<span class="custom-date-month"></span>
-							<span class="custom-date-weekday"></span>
 						</div>
 						<input type="date" id="dateEnd" name="dateEnd" required>
 					</div>
