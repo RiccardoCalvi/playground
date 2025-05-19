@@ -32,10 +32,16 @@
 		border-radius: $radius;
 		padding: $spacing-sm $spacing-md;
 		min-width: 5rem;
+		height: 5rem;
 		box-shadow: $shadow-sm;
 		pointer-events: none;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.custom-date-display span {
+		margin: auto 0;
 		display: block;
 		line-height: 1;
 	}
@@ -97,6 +103,10 @@
 			height: 100%;
 			margin: 0 auto;
 			padding: 0 $spacing-xs;
+
+			@include respond-to(md) {
+				min-height: 6rem;
+			}
 
 			// nascondi gli spinner nativi
 			input[type="number"] {
