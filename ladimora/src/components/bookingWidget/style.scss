@@ -9,9 +9,8 @@
 
 	/* ── Form wrapper ── */
 	.booking-form {
-		@include flex-container(row, space-around, stretch, wrap);
-		gap: $spacing-md;
-		flex-grow: 2 !important;
+		@include flex-container(row, center, stretch, wrap);
+		gap: 4rem;
 	}
 
 	/* ── Custom date container ── */
@@ -44,10 +43,12 @@
 		font-size: $font-size-2xl;
 		font-weight: 700;
 		color: $color-primary;
+		font-family: $font-heading;
 	}
 	.custom-date-month,
 	.custom-date-weekday {
-		font-size: $font-size-sm;
+		font-family: $font-body;
+		font-size: $font-size-base;
 		color: $color-text;
 	}
 	/* input trasparente sopra il box */
@@ -99,6 +100,8 @@
 
 			// nascondi gli spinner nativi
 			input[type="number"] {
+			font-family: $font-heading;
+			font-weight: 700;
 			-moz-appearance: textfield;
 			-webkit-appearance: none;
 			border: none;
@@ -144,6 +147,8 @@
 	/* ── Pulsante ── */
 	.booking-form button {
 		@include button-base;
+		height: 5rem;
+		margin: auto 0;
 		border: 0;
 	}
 }
