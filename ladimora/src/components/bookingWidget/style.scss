@@ -22,7 +22,8 @@
 	.custom-date-label {
 		display: block;
 		font-size: $font-size-sm;
-		font-weight: 600;
+		font-family: $font-heading;
+		font-weight: 700;
 		color: $color-text;
 		text-transform: uppercase;
 		margin-bottom: $spacing-xs;
@@ -84,7 +85,8 @@
 		font-size: $font-size-sm;
 
 		label {
-			font-weight: 600;
+			font-weight: 700;
+			font-family: $font-heading;
 			text-align: center;
 			text-transform: uppercase;
 			margin-bottom: $spacing-xs;
