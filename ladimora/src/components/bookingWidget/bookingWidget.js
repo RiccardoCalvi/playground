@@ -31,15 +31,19 @@ class LaDimoraBooking extends HTMLElement {
 					</div>
 
 					<!-- Adulti -->
-					<div class="adult-container">
-						<label for="adultNumber">Adulti</label>
-						<input type="number" id="adultNumber" name="adultNumber" min="1" max="4" value="1" required>
-					</div>
+						<div class="adult-container">
+							<label for="adulti">Adulti</label>
+							<div class="adult-picker">
+								<button type="button" class="dec">–</button>
+								<input id="adultNumber" type="number" min="1" max="4" value="1" required>
+								<button type="button" class="inc">+</button>
+							</div>
+						</div>
 
-					<button type="submit">Controlla Disponibilità</button>
-				</form>
-			</div>
-		`;
+						<button type="submit">Controlla Disponibilità</button>
+						</form>
+	</div>
+	`;
 	}
 
 	_initBookingForm() {
