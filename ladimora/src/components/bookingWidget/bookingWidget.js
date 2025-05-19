@@ -32,7 +32,7 @@ class LaDimoraBooking extends HTMLElement {
 
 					<!-- Adulti -->
 						<div class="adult-container">
-							<label for="adultNumber">Adulti</label>
+							<label for="adultNumber">Ospiti</label>
 							<div class="adult-picker">
 								<button type="button" onclick="document.getElementById('adultNumber').stepDown()" aria-label="Riduci"> &minus;</button>
 								<input id="adultNumber" type="number" value="1" min="1" max="4" required aria-live="polite">
