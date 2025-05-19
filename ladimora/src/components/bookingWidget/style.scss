@@ -6,14 +6,14 @@
 	font-family: $font-heading;
 	padding: $spacing-lg;
 	background: $color-white;
-	
+
 	/* ── Form wrapper ── */
 	.booking-form {
 		@include flex-container(row, space-around, stretch, wrap);
 		gap: $spacing-md;
 		flex-grow: 2 !important;
 	}
-	
+
 	/* ── Custom date container ── */
 	.custom-date-container {
 		position: relative;
@@ -71,71 +71,76 @@
 	}
 
 	/* ── Adulti ── */
-.adult-container {
-	display: flex;
-	flex-direction: column;
-	font-size: $font-size-sm;
-  
-	label {
-	  font-weight: 600;
-	  text-align: center;
-	  text-transform: uppercase;
-	  margin-bottom: $spacing-xs;
-	  color: $color-text;
-	}
-  
-	.adult-picker {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  background: #fff;
-	  border: 1px solid #ccc;
-	  border-radius: $radius;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-	  width: 4rem;            // uguale al width originario
-	  height: 3.5rem;         // regola per allinearlo alle card data
-	  margin: 0 auto;
-  
-	  // rimuovo spinner nativi
-	  input[type="number"] {
-		-moz-appearance: textfield;
-		-webkit-appearance: none;
-		margin: 0;
-		border: none;
-		background: transparent;
-		color: $color-primary;
-		font-size: $font-size-2xl;
-		text-align: center;
-		width: 100%;
-		height: 100%;
-		padding: 0;
-	  }
-  
-	  button {
-		flex: none;
-		background: transparent;
-		border: none;
-		font-size: $font-size-lg;
-		color: $color-primary;
-		width: 2.5rem;
-		height: 100%;
-		cursor: pointer;
+	.adult-container {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		user-select: none;
-  
-		&:hover {
-		  background: rgba($color-primary, .1);
+		flex-direction: column;
+		font-size: $font-size-sm;
+
+		label {
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: $spacing-xs;
+			color: $color-text;
 		}
-	  }
-  
-	  .dec { border-right: 1px solid #eee; }
-	  .inc { border-left: 1px solid #eee; }
+
+		.adult-picker {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: #fff;
+			border: 1px solid #ccc;
+			border-radius: $radius;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+			width: 6rem;
+			height: 100%;
+			margin: 0 auto;
+			padding: 0 $spacing-xs;
+
+			// nascondi gli spinner nativi
+			input[type="number"] {
+			-moz-appearance: textfield;
+			-webkit-appearance: none;
+			border: none;
+			background: transparent;
+			color: $color-primary;
+			font-size: $font-size-2xl;
+			text-align: center;
+			width: 2rem;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+				}
+				input[type="number"]::-webkit-outer-spin-button,
+				input[type="number"]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+				}
+
+				button {
+			background: transparent;
+			border: none;
+			font-size: $font-size-lg;
+			color: $color-primary;
+			width: 1.75rem;
+			height: 100%;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			user-select: none;
+			padding: 0;
+
+			&:hover {
+				background: rgba($color-primary, .1);
+			}
+			&:focus {
+				outline: none;
+			}
+				}
+		}
 	}
-  }
-  
-	
+
 	/* ── Pulsante ── */
 	.booking-form button {
 		@include button-base;

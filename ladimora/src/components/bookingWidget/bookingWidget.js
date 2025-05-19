@@ -32,11 +32,11 @@ class LaDimoraBooking extends HTMLElement {
 
 					<!-- Adulti -->
 						<div class="adult-container">
-							<label for="adulti">Adulti</label>
+							<label for="adultNumber">Adulti</label>
 							<div class="adult-picker">
-								<button type="button" class="dec">–</button>
-								<input id="adultNumber" type="number" min="1" max="4" value="1" required>
-								<button type="button" class="inc">+</button>
+								<button type="button" onclick="document.getElementById('adultNumber').stepDown()" aria-label="Riduci"> &minus;</button>
+								<input id="adultNumber" type="number" value="1" min="1" max="4" required aria-live="polite">
+								<button type="button" onclick="document.getElementById('adultNumber').stepUp()" aria-label="Aumenta"> &#43;</button>
 							</div>
 						</div>
 
