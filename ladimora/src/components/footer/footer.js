@@ -39,4 +39,4 @@ class LaDimoraHeader extends HTMLElement {
 
 }
 
-	customElements.define('ladimora-header', LaDimoraHeader);
+	customElements.define('ladimora-footer', LaDimoraHeader);
