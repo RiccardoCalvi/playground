@@ -3,18 +3,15 @@
 
 .booking-form-container {
 	width: 100%;
-	font-family: 'Montserrat', sans-serif;
-	padding: 2rem; 
-	background: #fff;
+	font-family: $font-heading;
+	padding: $spacing-lg;
+	background: $color-white;
 	
 	/* ── Form wrapper ── */
 	.booking-form {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-around;
+		@include flex-container(row, space-around, stretch, wrap);
+		gap: $spacing-md;
 		flex-grow: 2 !important;
-		gap: 1rem;
-		flex-wrap: wrap;
 	}
 	
 	/* ── Custom date container ── */
@@ -25,32 +22,32 @@
 	}
 	.custom-date-label {
 		display: block;
-		font-size: 0.75rem;
+		font-size: $font-size-sm;
 		font-weight: 600;
-		color: #333;
+		color: $color-text;
 		text-transform: uppercase;
-		margin-bottom: 0.25rem;
+		margin-bottom: $spacing-xs;
 	}
 	.custom-date-display {
 		background: #f7f7f7;
-		border-radius: 3px;
-		padding: 0.5rem 0.75rem;
+		border-radius: $radius;
+		padding: $spacing-sm $spacing-md;
 		min-width: 5rem;
-		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+		box-shadow: $shadow-sm;
 	}
 	.custom-date-display span {
 		display: block;
 		line-height: 1;
 	}
 	.custom-date-day {
-		font-size: 2rem;
+		font-size: $font-size-2xl;
 		font-weight: 700;
-		color: #f8941d;
+		color: $color-primary;
 	}
 	.custom-date-month,
 	.custom-date-weekday {
-		font-size: 0.875rem;
-		color: #555;
+		font-size: $font-size-sm;
+		color: $color-text;
 	}
 	/* input trasparente sopra il box */
 	.custom-date-container input[type="date"] {
@@ -66,26 +63,25 @@
 	.adult-container {
 		display: flex;
 		flex-direction: column;
-		font-size: 0.75rem;
+		font-size: $font-size-sm;
 	}
 	.adult-container label {
 		font-weight: 600;
 		text-transform: uppercase;
-		margin-bottom: 0.25rem;
-		color: #333;
+		margin-bottom: $spacing-xs;
+		color: $color-text;
 	}
 	.adult-container input {
 		width: 4rem;
-		padding: 0.5rem;
+		padding: $spacing-sm;
 		border: 1px solid #ccc;
-		border-radius: 0.5rem;
-		font-size: 1rem;
+		border-radius: $radius;
+		font-size: $font-size-base;
 		text-align: center;
 	}
 	
 	/* ── Pulsante ── */
 	.booking-form button {
 		@include button-base;
-        box-shadow: $shadow-sm;
 	}
 }
