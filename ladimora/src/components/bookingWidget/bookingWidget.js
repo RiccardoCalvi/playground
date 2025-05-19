@@ -8,9 +8,9 @@ class LaDimoraBooking extends HTMLElement {
     this.innerHTML = `
       <div class="booking-form-container">
         <form id="booking-form" class="booking-form">
-          <!-- Partenza -->
+          <!-- Arrivo -->
           <div class="custom-date-container">
-            <label class="custom-date-label" for="dateStart">Partenza</label>
+            <label class="custom-date-label" for="dateStart">Arrivo</label>
             <div class="custom-date-display">
               <span class="custom-date-day"></span>
               <span class="custom-date-month"></span>
@@ -19,9 +19,9 @@ class LaDimoraBooking extends HTMLElement {
             <input type="date" id="dateStart" name="dateStart" required>
           </div>
 
-          <!-- Arrivo -->
+          <!-- Partenza -->
           <div class="custom-date-container">
-            <label class="custom-date-label" for="dateEnd">Arrivo</label>
+            <label class="custom-date-label" for="dateEnd">Partenza</label>
             <div class="custom-date-display">
               <span class="custom-date-day"></span>
               <span class="custom-date-month"></span>
