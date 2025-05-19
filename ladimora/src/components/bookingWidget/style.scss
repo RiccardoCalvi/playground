@@ -28,7 +28,7 @@
 		margin-bottom: $spacing-xs;
 	}
 	.custom-date-display {
-		background: #f7f7f7;
+		background: $color-white;
 		border-radius: $radius;
 		padding: $spacing-sm $spacing-md;
 		min-width: 5rem;
@@ -96,13 +96,13 @@
 			align-items: center;
 			justify-content: space-between;
 			background: #fff;
-			border: 1px solid #ccc;
+			border: 0;
 			border-radius: $radius;
-			box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 			width: 6rem;
 			height: 100%;
 			margin: 0 auto;
 			padding: 0 $spacing-xs;
+			box-shadow: $shadow-sm;
 
 			@include respond-to(md) {
 				min-height: 6rem;
@@ -110,47 +110,49 @@
 
 			// nascondi gli spinner nativi
 			input[type="number"] {
-			font-family: $font-heading;
-			font-weight: 700;
-			-moz-appearance: textfield;
-			-webkit-appearance: none;
-			border: none;
-			background: transparent;
-			color: $color-primary;
-			font-size: $font-size-2xl;
-			text-align: center;
-			width: 2rem;
-			height: 100%;
-			padding: 0;
-			margin: 0;
-				}
-				input[type="number"]::-webkit-outer-spin-button,
-				input[type="number"]::-webkit-inner-spin-button {
-			-webkit-appearance: none;
-			margin: 0;
-				}
-
-				button {
-			background: transparent;
-			border: none;
-			font-size: $font-size-lg;
-			color: $color-primary;
-			width: 1.75rem;
-			height: 100%;
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			user-select: none;
-			padding: 0;
-
-			&:hover {
-				background: rgba($color-primary, .1);
+				font-family: $font-heading;
+				font-weight: 700;
+				-moz-appearance: textfield;
+				-webkit-appearance: none;
+				border: none;
+				background: transparent;
+				color: $color-primary;
+				font-size: $font-size-2xl;
+				text-align: center;
+				width: 2rem;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				border: 0;
 			}
-			&:focus {
-				outline: none;
+
+			input[type="number"]::-webkit-outer-spin-button,
+			input[type="number"]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
 			}
+
+			button {
+				background: transparent;
+				border: none;
+				font-size: $font-size-lg;
+				color: $color-primary;
+				width: 1.75rem;
+				height: 100%;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				user-select: none;
+				padding: 0;
+
+				&:hover {
+					background: rgba($color-primary, .1);
 				}
+				&:focus {
+					outline: none;
+				}
+			}
 		}
 	}
 
