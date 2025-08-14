@@ -15,12 +15,12 @@ class LaDimoraNearby extends HTMLElement {
 
     getNearbyHtml() {
         const items = [
-          { name: "FCO", distance: "25km", icon: this.getPlaneIcon() },
-          { name: "CIA", distance: "26km", icon: this.getPlaneIcon() },
-          { name: "Supermercati", distance: "50m", icon: this.getShopIcon() },
-          { name: "Stazione", distance: "200m", icon: this.getTrainIcon() },
-          { name: "Bambino Gesù", distance: "1km", icon: this.getHospitalIcon() },
-          { name: "Basilica San Pietro", distance: "500m", icon: this.getChurchIcon() }
+			{ name: "Supermercati", distance: "50m", icon: this.getShopIcon() },
+			{ name: "Stazione", distance: "200m", icon: this.getTrainIcon() },
+			{ name: "Basilica San Pietro", distance: "500m", icon: this.getChurchIcon() },
+			{ name: "Bambino Gesù", distance: "1km", icon: this.getHospitalIcon() },
+			{ name: "FCO", distance: "25km", icon: this.getPlaneIcon() },
+			{ name: "CIA", distance: "26km", icon: this.getPlaneIcon() }
         ];
       
         return items.map(item => `
